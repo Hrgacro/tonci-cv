@@ -12,9 +12,6 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Toggle Script (cache-busted) -->
-  <script src="script.js?cachebust=2" defer></script>
 </head>
 <body>
   <header class="hero">
@@ -116,5 +113,25 @@
     </ul>
     </section>
   </main>
+
+  <!-- Inline toggle script for testing -->
+  <script>
+    console.log('INLINE toggle script running');
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('INLINE DOM ready');
+      const toggleBtn = document.getElementById('toggleView');
+      if (!toggleBtn) {
+        console.error('Toggle button not found');
+        return;
+      }
+      toggleBtn.addEventListener('click', () => {
+        console.log('INLINE Toggle clicked');
+        document.body.classList.toggle('composite');
+        toggleBtn.textContent = document.body.classList.contains('composite')
+          ? 'Standard View'
+          : 'Alternate View';
+      });
+    });
+  </script>
 </body>
 </html>
