@@ -29,7 +29,22 @@
   </header>
 
   <nav id="sidebar" class="composite-only">
-    <!-- Composite sidebar content (profile, contacts, skills) -->
+    <div class="sidebar-profile">
+      <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-small" />
+      <h2>$title$</h2>
+      <p>AI Developer & UX/UI Designer</p>
+    </div>
+    <ul class="sidebar-links">
+      <li><i class="fas fa-briefcase"></i> <a href="#experience">Experience</a></li>
+      <li><i class="fas fa-graduation-cap"></i> <a href="#education">Education</a></li>
+      <li><i class="fas fa-book"></i> <a href="#courses">Courses</a></li>
+      <li><i class="fas fa-tools"></i> <a href="#skills">Skills</a></li>
+      <li><i class="fas fa-language"></i> <a href="#languages">Languages</a></li>
+    </ul>
+    <div class="sidebar-contacts">
+      <p><i class="fas fa-envelope"></i> your.email@example.com</p>
+      <p><i class="fas fa-link"></i> github.com/yourusername</p>
+    </div>
   </nav>
 
   <main>
@@ -42,10 +57,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       console.log('INLINE DOM ready');
       const toggleBtn = document.getElementById('toggleView');
-      if (!toggleBtn) {
-        console.error('Toggle button not found');
-        return;
-      }
+      if (!toggleBtn) return console.error('Toggle button not found');
       toggleBtn.addEventListener('click', () => {
         console.log('INLINE Toggle clicked');
         document.body.classList.toggle('composite');
