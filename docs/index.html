@@ -114,7 +114,24 @@
     </section>
   </main>
 
-  <!-- External toggle script loaded after DOM -->
-  <script src="script.js?cachebust=4"></script>
+  <!-- Inline toggle script (final) -->
+  <script>
+    console.log('INLINE toggle script running');
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('INLINE DOM ready');
+      const toggleBtn = document.getElementById('toggleView');
+      if (!toggleBtn) {
+        console.error('Toggle button not found');
+        return;
+      }
+      toggleBtn.addEventListener('click', () => {
+        console.log('INLINE Toggle clicked');
+        document.body.classList.toggle('composite');
+        toggleBtn.textContent = document.body.classList.contains('composite')
+          ? 'Standard View'
+          : 'Alternate View';
+      });
+    });
+  </script>
 </body>
 </html>
