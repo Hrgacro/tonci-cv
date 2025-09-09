@@ -1,3 +1,4 @@
+<!-- docs/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <!-- Stylesheet (cache-bust by bumping v=) -->
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <header class="hero">
@@ -28,118 +29,55 @@
     </div>
   </header>
 
+  <!-- Alternate-view Sidebar -->
   <nav id="sidebar" class="composite-only">
-    <div class="sidebar-profile">
+    <div class="sidebar-section sidebar-profile">
       <img src="avatar.jpg" alt="User Avatar" class="avatar-small" />
       <h2>Tonči Hrgović</h2>
-      <p>AI Developer & UX/UI Designer</p>
+      <p class="role">AI Developer & UX/UI Designer</p>
     </div>
 
-    <div class="prototype-demo">
-      <h3>mmWave Prototype Demo</h3>
+    <div class="sidebar-section prototype-demo">
+      <h3>Prototype Demo</h3>
       <iframe
-        width="100%"
-        height="150"
         src="https://www.youtube.com/embed/zbJpwU5Eh9E?si=_bq69pZl7EA5tKyl"
         title="mmWave Parking Detection Prototype"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-        style="border-radius: 8px; margin: 1rem 0;">
+        allowfullscreen>
       </iframe>
     </div>
 
-    <ul class="sidebar-links">
-      <li><i class="fas fa-briefcase"></i> <a href="#experience">Experience</a></li>
-      <li><i class="fas fa-graduation-cap"></i> <a href="#education">Education</a></li>
-      <li><i class="fas fa-book"></i> <a href="#courses">Courses</a></li>
-      <li><i class="fas fa-tools"></i> <a href="#skills">Skills</a></li>
-      <li><i class="fas fa-language"></i> <a href="#languages">Languages</a></li>
-    </ul>
-    <div class="sidebar-contacts">
-      <p><i class="fas fa-envelope"></i> your.email@example.com</p>
-      <p><i class="fas fa-link"></i> github.com/yourusername</p>
+    <div class="sidebar-section sidebar-links">
+      <h3>Navigate</h3>
+      <ul>
+        <li><i class="fas fa-briefcase"></i><a href="#experience">Experience</a></li>
+        <li><i class="fas fa-graduation-cap"></i><a href="#education">Education</a></li>
+        <li><i class="fas fa-book"></i><a href="#courses">Courses</a></li>
+        <li><i class="fas fa-tools"></i><a href="#skills">Skills</a></li>
+        <li><i class="fas fa-language"></i><a href="#languages">Languages</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section sidebar-contacts">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p><i class="fas fa-link"></i><a href="https://github.com/yourusername">github.com/yourusername</a></p>
     </div>
   </nav>
 
   <main>
-    <section id="experience" class="section-card">
-      <h2>Experience</h2>
-      <h3 id="freelance-uxui-designer">Freelance UX/UI Designer</h3>
-      <p><strong>09/2023 – 05/2024, Osijek</strong><br />
-      - Redesigned web flows and interfaces in Figma<br />
-      - Developed style guides and component libraries<br />
-      - Created a new Photo/Video portfolio section, enhancing usability<br />
-      - Managed client communications and project timelines from concept to delivery</p>
-      
-      <h3 id="mmwave-parking-solution-developer">mmWave Parking Solution Developer</h3>
-      <p><strong>02/2025 – 09/2025, Osijek</strong><br />
-      - Built a hands-on parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br />
-      - Created a Python script with AI assistance to capture and parse high-frequency radar data<br />
-      - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br />
-      - Designed and deployed a Plotly Dash dashboard for live visualization</p>
-      
-      <h3 id="vehicle-fleet-administrator-hrvatski-telekom">Vehicle Fleet Administrator, Hrvatski Telekom</h3>
-      <p><strong>04/2019 – 09/2019, Osijek</strong><br />
-      - Scheduled maintenance and tracked over 50 vehicles<br />
-      - Automated status reporting, delivering timely insights to management<br />
-      - Created Excel-based dashboards to monitor fleet performance</p>
-      
-      <h3 id="bartender-server">Bartender &amp; Server</h3>
-      <p><strong>2017 – 2021</strong><br />
-      - Learned about user experience and customer psychology<br />
-      - Developed strong communication and teamwork skills<br />
-      - Adapted to dynamic workflows and resolved customer issues promptly</p>
-    </section>
-
-    <section id="education" class="section-card">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>UX/UI Design</strong>, Algebra (09/2023 – 05/2024)</li>
-        <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014 – 12/2024)</li>
-      </ul>
-    </section>
-
-    <section id="courses" class="section-card">
-      <h2>Courses</h2>
-      <ul>
-        <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
-        <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
-        <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
-      </ul>
-    </section>
-
-    <div id="skills" class="section-card">
-      <h2 id="technical-skills">Technical Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
-        <li><strong>AI/ML:</strong> NVIDIA Nemotron API, prompt engineering</li>
-        <li><strong>Embedded &amp; Hardware Tools:</strong> STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
-        <li><strong>Data Visualization &amp; DevOps:</strong> Plotly Dash, Docker, GitHub</li>
-      </ul>
-    </div>
-
-    <section id="languages" class="section-card">
-      <h2>Languages</h2>
-      <ul>
-        <li>Croatian (native)</li>
-        <li>English (C2)</li>
-      </ul>
-    </section>
+    <!-- existing main content (sections) here -->
+    <!-- … -->
   </main>
 
   <!-- Inline toggle script -->
   <script>
-    console.log('INLINE toggle script running');
     document.addEventListener('DOMContentLoaded', () => {
-      console.log('INLINE DOM ready');
-      const toggleBtn = document.getElementById('toggleView');
-      if (!toggleBtn) return console.error('Toggle button not found');
-      toggleBtn.addEventListener('click', () => {
-        console.log('INLINE Toggle clicked');
+      const btn = document.getElementById('toggleView');
+      btn.addEventListener('click', () => {
         document.body.classList.toggle('composite');
-        toggleBtn.textContent = document.body.classList.contains('composite')
+        btn.textContent = document.body.classList.contains('composite')
           ? 'Standard View'
           : 'Alternate View';
       });
