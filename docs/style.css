@@ -12,7 +12,7 @@ header.hero {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #e2e8f0;
 }
 .hero-content {
@@ -37,7 +37,7 @@ header.hero {
   font-weight: bold;
   cursor: pointer;
   background: #0ea5e9;
-  color: #ffffff;
+  color: #fff;
 }
 
 /* Hide both view wrappers initially */
@@ -46,7 +46,7 @@ header.hero {
   display: none;
 }
 
-/* Standard View: horizontal nav + stacked sections */
+/* Standard View */
 .view-standard {
   display: block;
 }
@@ -68,7 +68,7 @@ main {
   background: #f4f6fa;
 }
 .card {
-  background: #ffffff;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(30,40,70,0.07);
@@ -81,14 +81,13 @@ h2 {
   margin-top: 0;
 }
 
-/* Alternate View: grid layout */
+/* Alternate View */
 .view-alt {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 2rem;
   padding: 2rem;
   background: #f4f6fa;
-  min-height: 100vh;
 }
 .alt-sidebar {
   position: sticky;
@@ -96,7 +95,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background: #ffffff;
+  background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
@@ -106,8 +105,7 @@ h2 {
   height: 80px;
   border: 3px solid #0ea5e9;
   border-radius: 50%;
-  margin: 0 auto;
-  display: block;
+  margin: 0 auto 0.75rem;
 }
 .sidebar-profile h2 {
   margin: 0.5rem 0 0;
@@ -115,8 +113,8 @@ h2 {
   color: #1e293b;
 }
 .sidebar-profile .role {
-  text-align: center;
   font-size: 0.9rem;
+  text-align: center;
   color: #475569;
 }
 .prototype-demo iframe {
@@ -164,7 +162,7 @@ h2 {
   gap: 2.5rem;
 }
 .section-card {
-  background: #ffffff;
+  background: #fff;
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(30,40,70,0.07);
@@ -177,7 +175,7 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* Toggle between views */
+/* Toggle logic */
 body:not(.alt) .view-standard { display: block; }
 body:not(.alt) .view-alt      { display: none; }
 body.alt     .view-standard { display: none; }
@@ -185,6 +183,13 @@ body.alt     .view-alt      { display: grid; }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .view-alt { grid-template-columns: 1fr; padding: 1rem; }
-  .alt-sidebar { width: 100%; position: relative; top: auto; }
+  .view-alt {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .alt-sidebar {
+    width: 100%;
+    position: relative;
+    top: auto;
+  }
 }
