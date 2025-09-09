@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Tonči Hrgović — Resume & UX/UI Demo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13"/>
 </head>
 <body>
-  <!-- Global toggle button -->
   <button id="toggleView" class="btn toggle-global">Alternate View</button>
 
-  <!-- Header (Standard View only) -->
+  <!-- Standard View Header -->
   <header class="hero view-standard">
     <div class="hero-content">
-      <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-large" />
+      <img src="avatar.jpg" class="avatar-large" alt="Tonči Hrgović"/>
       <div>
         <h1>Tonči Hrgović</h1>
         <p class="role">AI Developer & UX/UI Designer</p>
@@ -36,24 +35,65 @@
     <main>
       <section id="experience" class="card">
         <h2>Experience</h2>
-        <!-- Experience content -->
+        <h3>Freelance UX/UI Designer</h3>
+        <p><strong>09/2023–05/2024, Osijek</strong><br>
+        - Redesigned web flows and interfaces in Figma<br>
+        - Developed style guides and component libraries<br>
+        - Created a new Photo/Video portfolio section, enhancing usability<br>
+        - Managed client communications and project timelines from concept to delivery</p>
+        <h3>mmWave Parking Solution Developer</h3>
+        <p><strong>02/2025–09/2025, Osijek</strong><br>
+        - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
+        - Created a Python script with AI assistance to parse high-frequency radar data<br>
+        - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
+        - Deployed a Plotly Dash dashboard for live visualization</p>
+        <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
+        <p><strong>04/2019–09/2019, Osijek</strong><br>
+        - Scheduled maintenance and tracked 50+ vehicles<br>
+        - Automated status reporting for management insights<br>
+        - Created Excel-based dashboards to monitor fleet performance</p>
+        <h3>Bartender &amp; Server</h3>
+        <p><strong>2017–2021</strong><br>
+        - Learned user experience and customer psychology<br>
+        - Developed communication and teamwork skills<br>
+        - Adapted to dynamic workflows and resolved issues promptly</p>
       </section>
+
       <section id="education" class="card">
         <h2>Education</h2>
-        <!-- Education content -->
+        <ul>
+          <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
+          <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
+        </ul>
       </section>
+
       <section id="courses" class="card">
         <h2>Courses</h2>
-        <!-- Courses content -->
+        <ul>
+          <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
+          <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
+          <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
+        </ul>
       </section>
+
       <section id="skills" class="card">
         <h2>Skills</h2>
-        <!-- Skills content -->
+        <ul>
+          <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
+          <li>NVIDIA Nemotron API, prompt engineering</li>
+          <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
+          <li>Plotly Dash, Docker, GitHub</li>
+        </ul>
       </section>
+
       <section id="languages" class="card">
         <h2>Languages</h2>
-        <!-- Languages content -->
+        <ul>
+          <li>Croatian (native)</li>
+          <li>English (C2)</li>
+        </ul>
       </section>
+
       <section id="prototype" class="card">
         <h2>Prototype Video</h2>
         <div class="prototype-demo">
@@ -69,11 +109,11 @@
     </main>
   </div>
 
-  <!-- Alternate UX/UI Showcase View -->
+  <!-- Alternate View -->
   <div class="view-alt">
     <aside class="alt-sidebar">
       <div class="sidebar-profile">
-        <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
+        <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović"/>
         <h2>Tonči Hrgović</h2>
         <p class="role">AI Developer & UX/UI Designer</p>
       </div>
@@ -107,23 +147,23 @@
     <main class="alt-main">
       <section id="experience" class="section-card">
         <h2>Experience</h2>
-        <!-- Experience content -->
+        <!-- same Experience content -->
       </section>
       <section id="education" class="section-card">
         <h2>Education</h2>
-        <!-- Education content -->
+        <!-- same Education content -->
       </section>
       <section id="courses" class="section-card">
         <h2>Courses</h2>
-        <!-- Courses content -->
+        <!-- same Courses content -->
       </section>
       <section id="skills" class="section-card">
         <h2>Skills</h2>
-        <!-- Skills content -->
+        <!-- same Skills content -->
       </section>
       <section id="languages" class="section-card">
         <h2>Languages</h2>
-        <!-- Languages content -->
+        <!-- same Languages content -->
       </section>
       <section id="prototype" class="section-card">
         <h2>Prototype Video</h2>
@@ -148,6 +188,19 @@
         btn.textContent = document.body.classList.contains('alt')
           ? 'Standard View'
           : 'Alternate View';
+      });
+
+      // Smooth scroll in alternate view
+      document.querySelectorAll('.sidebar-links a').forEach(link => {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const id = link.getAttribute('href').slice(1);
+          const target = document.getElementById(id);
+          document.querySelector('.alt-main').scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+          });
+        });
       });
     });
   </script>
