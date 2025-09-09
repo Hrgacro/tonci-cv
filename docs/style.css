@@ -23,8 +23,10 @@ header.hero {
 .avatar-large {
   width: 80px;
   height: 80px;
+  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #0ea5e9;
+  display: block;
 }
 .role {
   margin: 0.25rem 0 0;
@@ -109,9 +111,10 @@ body.alt header.hero,
 .alt-sidebar .avatar-small {
   width: 80px;
   height: 80px;
-  border: 3px solid #0ea5e9;
+  object-fit: cover;
   border-radius: 50%;
-  margin: 0 auto 0.75rem;
+  border: 3px solid #0ea5e9;
+  display: block;
 }
 .sidebar-profile h2 {
   margin: 0.5rem 0 0;
@@ -187,6 +190,12 @@ body:not(.alt) .view-alt      { display: none; }
 body.alt     .view-standard { display: none; }
 body.alt     .view-alt      { display: grid; }
 
+.toggle-global {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 99;
+}
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .view-alt {
