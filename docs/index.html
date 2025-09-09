@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tonči Hrgović</title>
+  <title>Tonči Hrgović — Resume & UX/UI Demo</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
 
-  <!-- Stylesheet (cache-bust v6) -->
-  <link rel="stylesheet" href="style.css?v=6" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <header class="hero">
@@ -23,98 +23,132 @@
     </div>
     <div class="cta-group">
       <button id="toggleView" class="btn">Alternate View</button>
-      <!-- Optional: link to standalone page -->
-      <a href="alternate.html" class="btn btn-secondary">Standalone UX/UI</a>
     </div>
   </header>
 
-  <nav id="sidebar">
-    <ul>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-      <li><a href="#courses"><i class="fas fa-book"></i> Courses</a></li>
-      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
-      <li><a href="#languages"><i class="fas fa-language"></i> Languages</a></li>
-    </ul>
-    <div class="contact">
-      <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com"> your.email@example.com</a></p>
-      <p><i class="fas fa-link"></i><a href="https://github.com/yourusername"> github.com/yourusername</a></p>
-    </div>
-  </nav>
+  <!-- Standard Resume View -->
+  <div class="view-standard">
+    <nav class="nav-horizontal">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#courses">Courses</a>
+      <a href="#skills">Skills</a>
+      <a href="#languages">Languages</a>
+    </nav>
+    <main>
+      <section id="experience" class="card">
+        <h2>Experience</h2>
+        <h3>Freelance UX/UI Designer</h3>
+        <p><strong>09/2023–05/2024, Osijek</strong><br>
+        - Redesigned web flows and interfaces in Figma<br>
+        - Developed style guides and component libraries<br>
+        - Created a new Photo/Video portfolio section, enhancing usability<br>
+        - Managed client communications and project timelines from concept to delivery</p>
+        <h3>mmWave Parking Solution Developer</h3>
+        <p><strong>02/2025–09/2025, Osijek</strong><br>
+        - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
+        - Created a Python script with AI assistance to parse high-frequency radar data<br>
+        - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
+        - Deployed a Plotly Dash dashboard for live visualization</p>
+        <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
+        <p><strong>04/2019–09/2019, Osijek</strong><br>
+        - Scheduled maintenance and tracked 50+ vehicles<br>
+        - Automated status reporting for management insights<br>
+        - Created Excel-based dashboards to monitor fleet performance</p>
+        <h3>Bartender &amp; Server</h3>
+        <p><strong>2017–2021</strong><br>
+        - Learned user experience and customer psychology<br>
+        - Developed communication and teamwork skills<br>
+        - Adapted to dynamic workflows and resolved issues promptly</p>
+      </section>
 
-  <main>
-    <section id="experience" class="card">
-      <h2>Experience</h2>
+      <section id="education" class="card">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
+          <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
+        </ul>
+      </section>
 
-      <h3>Freelance UX/UI Designer</h3>
-      <p><strong>09/2023–05/2024, Osijek</strong><br>
-      - Redesigned web flows and interfaces in Figma<br>
-      - Developed style guides and component libraries<br>
-      - Created a new Photo/Video portfolio section, enhancing usability<br>
-      - Managed client communications and project timelines from concept to delivery</p>
+      <section id="courses" class="card">
+        <h2>Courses</h2>
+        <ul>
+          <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
+          <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
+          <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
+        </ul>
+      </section>
 
-      <h3>mmWave Parking Solution Developer</h3>
-      <p><strong>02/2025–09/2025, Osijek</strong><br>
-      - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
-      - Created a Python script with AI assistance to parse high-frequency radar data<br>
-      - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
-      - Deployed a Plotly Dash dashboard for live visualization</p>
+      <section id="skills" class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
+          <li>NVIDIA Nemotron API, prompt engineering</li>
+          <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
+          <li>Plotly Dash, Docker, GitHub</li>
+        </ul>
+      </section>
 
-      <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
-      <p><strong>04/2019–09/2019, Osijek</strong><br>
-      - Scheduled maintenance and tracked 50+ vehicles<br>
-      - Automated status reporting for management insights<br>
-      - Created Excel-based dashboards to monitor fleet performance</p>
+      <section id="languages" class="card">
+        <h2>Languages</h2>
+        <ul>
+          <li>Croatian (native)</li>
+          <li>English (C2)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 
-      <h3>Bartender &amp; Server</h3>
-      <p><strong>2017–2021</strong><br>
-      - Learned user experience and customer psychology<br>
-      - Developed communication and teamwork skills<br>
-      - Adapted to dynamic workflows and resolved issues promptly</p>
-    </section>
-
-    <section id="education" class="card">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
-        <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
-      </ul>
-    </section>
-
-    <section id="courses" class="card">
-      <h2>Courses</h2>
-      <ul>
-        <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
-        <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
-        <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
-      </ul>
-    </section>
-
-    <section id="skills" class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
-        <li>NVIDIA Nemotron API, prompt engineering</li>
-        <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
-        <li>Plotly Dash, Docker, GitHub</li>
-      </ul>
-    </section>
-
-    <section id="languages" class="card">
-      <h2>Languages</h2>
-      <ul>
-        <li>Croatian (native)</li>
-        <li>English (C2)</li>
-      </ul>
-    </section>
-  </main>
+  <!-- Alternate UX/UI Showcase View -->
+  <div class="view-alt">
+    <aside class="alt-sidebar">
+      <div class="sidebar-profile">
+        <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
+        <h2>Tonči Hrgović</h2>
+        <p class="role">AI Developer & UX/UI Designer</p>
+      </div>
+      <div class="prototype-demo">
+        <h3>Prototype Demo</h3>
+        <iframe
+          src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+          title="Prototype Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <nav class="sidebar-links">
+        <h3>Navigate</h3>
+        <ul>
+          <li><i class="fas fa-briefcase"></i><a href="#experience">Experience</a></li>
+          <li><i class="fas fa-graduation-cap"></i><a href="#education">Education</a></li>
+          <li><i class="fas fa-book"></i><a href="#courses">Courses</a></li>
+          <li><i class="fas fa-tools"></i><a href="#skills">Skills</a></li>
+          <li><i class="fas fa-language"></i><a href="#languages">Languages</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-contacts">
+        <h3>Contact</h3>
+        <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com"> your.email@example.com</a></p>
+        <p><i class="fas fa-link"></i><a href="https://github.com/yourusername"> github.com/yourusername</a></p>
+      </div>
+    </aside>
+    <main class="alt-main">
+      <!-- Repeat same section markup as above for experience, education, etc. -->
+      <section id="experience" class="section-card">…</section>
+      <section id="education" class="section-card">…</section>
+      <section id="courses" class="section-card">…</section>
+      <section id="skills" class="section-card">…</section>
+      <section id="languages" class="section-card">…</section>
+    </main>
+  </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const btn = document.getElementById('toggleView');
       btn.addEventListener('click', () => {
-        document.body.classList.toggle('composite');
-        btn.textContent = document.body.classList.contains('composite')
+        document.body.classList.toggle('alt');
+        btn.textContent = document.body.classList.contains('alt')
           ? 'Standard View'
           : 'Alternate View';
       });
