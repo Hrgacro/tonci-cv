@@ -6,13 +6,13 @@
   <title>Tonči Hrgović — Resume & UX/UI Demo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 <body>
-  <!-- Global Toggle Button -->
+  <!-- Global toggle button -->
   <button id="toggleView" class="btn toggle-global">Alternate View</button>
 
-  <!-- Hero header (Standard View only) -->
+  <!-- Header (Standard View only) -->
   <header class="hero view-standard">
     <div class="hero-content">
       <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-large" />
@@ -20,17 +20,6 @@
         <h1>Tonči Hrgović</h1>
         <p class="role">AI Developer & UX/UI Designer</p>
       </div>
-    </div>
-    <!-- Prototype Demo video in header -->
-    <div class="hero-video">
-      <h3>Prototype Demo</h3>
-      <iframe
-        src="https://www.youtube.com/embed/zbJpwU5Eh9E"
-        title="Prototype Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
     </div>
   </header>
 
@@ -42,72 +31,40 @@
       <a href="#courses">Courses</a>
       <a href="#skills">Skills</a>
       <a href="#languages">Languages</a>
+      <a href="#prototype">Prototype</a>
     </nav>
     <main>
-      <!-- Experience Section -->
       <section id="experience" class="card">
         <h2>Experience</h2>
-        <h3>Freelance UX/UI Designer</h3>
-        <p><strong>09/2023–05/2024, Osijek</strong><br>
-        - Redesigned web flows and interfaces in Figma<br>
-        - Developed style guides and component libraries<br>
-        - Created a new Photo/Video portfolio section, enhancing usability<br>
-        - Managed client communications and project timelines from concept to delivery</p>
-        <h3>mmWave Parking Solution Developer</h3>
-        <p><strong>02/2025–09/2025, Osijek</strong><br>
-        - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
-        - Created a Python script with AI assistance to parse high-frequency radar data<br>
-        - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
-        - Deployed a Plotly Dash dashboard for live visualization</p>
-        <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
-        <p><strong>04/2019–09/2019, Osijek</strong><br>
-        - Scheduled maintenance and tracked 50+ vehicles<br>
-        - Automated status reporting for management insights<br>
-        - Created Excel-based dashboards to monitor fleet performance</p>
-        <h3>Bartender &amp; Server</h3>
-        <p><strong>2017–2021</strong><br>
-        - Learned user experience and customer psychology<br>
-        - Developed communication and teamwork skills<br>
-        - Adapted to dynamic workflows and resolved issues promptly</p>
+        <!-- Experience content -->
       </section>
-
-      <!-- Education Section -->
       <section id="education" class="card">
         <h2>Education</h2>
-        <ul>
-          <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
-          <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
-        </ul>
+        <!-- Education content -->
       </section>
-
-      <!-- Courses Section -->
       <section id="courses" class="card">
         <h2>Courses</h2>
-        <ul>
-          <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
-          <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
-          <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
-        </ul>
+        <!-- Courses content -->
       </section>
-
-      <!-- Skills Section -->
       <section id="skills" class="card">
         <h2>Skills</h2>
-        <ul>
-          <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
-          <li>NVIDIA Nemotron API, prompt engineering</li>
-          <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
-          <li>Plotly Dash, Docker, GitHub</li>
-        </ul>
+        <!-- Skills content -->
       </section>
-
-      <!-- Languages Section -->
       <section id="languages" class="card">
         <h2>Languages</h2>
-        <ul>
-          <li>Croatian (native)</li>
-          <li>English (C2)</li>
-        </ul>
+        <!-- Languages content -->
+      </section>
+      <section id="prototype" class="card">
+        <h2>Prototype Video</h2>
+        <div class="prototype-demo">
+          <iframe
+            src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+            title="Prototype Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </section>
     </main>
   </div>
@@ -138,6 +95,7 @@
           <li><i class="fas fa-book"></i><a href="#courses">Courses</a></li>
           <li><i class="fas fa-tools"></i><a href="#skills">Skills</a></li>
           <li><i class="fas fa-language"></i><a href="#languages">Languages</a></li>
+          <li><i class="fas fa-video"></i><a href="#prototype">Prototype</a></li>
         </ul>
       </nav>
       <div class="sidebar-contacts">
@@ -147,70 +105,37 @@
       </div>
     </aside>
     <main class="alt-main">
-      <!-- Experience Section -->
       <section id="experience" class="section-card">
         <h2>Experience</h2>
-        <h3>Freelance UX/UI Designer</h3>
-        <p><strong>09/2023–05/2024, Osijek</strong><br>
-        - Redesigned web flows and interfaces in Figma<br>
-        - Developed style guides and component libraries<br>
-        - Created a new Photo/Video portfolio section, enhancing usability<br>
-        - Managed client communications and project timelines from concept to delivery</p>
-        <h3>mmWave Parking Solution Developer</h3>
-        <p><strong>02/2025–09/2025, Osijek</strong><br>
-        - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
-        - Created a Python script with AI assistance to parse high-frequency radar data<br>
-        - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
-        - Deployed a Plotly Dash dashboard for live visualization</p>
-        <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
-        <p><strong>04/2019–09/2019, Osijek</strong><br>
-        - Scheduled maintenance and tracked 50+ vehicles<br>
-        - Automated status reporting for management insights<br>
-        - Created Excel-based dashboards to monitor fleet performance</p>
-        <h3>Bartender &amp; Server</h3>
-        <p><strong>2017–2021</strong><br>
-        - Learned user experience and customer psychology<br>
-        - Developed communication and teamwork skills<br>
-        - Adapted to dynamic workflows and resolved issues promptly</p>
+        <!-- Experience content -->
       </section>
-
-      <!-- Education Section -->
       <section id="education" class="section-card">
         <h2>Education</h2>
-        <ul>
-          <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
-          <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
-        </ul>
+        <!-- Education content -->
       </section>
-
-      <!-- Courses Section -->
       <section id="courses" class="section-card">
         <h2>Courses</h2>
-        <ul>
-          <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
-          <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
-          <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
-        </ul>
+        <!-- Courses content -->
       </section>
-
-      <!-- Skills Section -->
       <section id="skills" class="section-card">
         <h2>Skills</h2>
-        <ul>
-          <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
-          <li>NVIDIA Nemotron API, prompt engineering</li>
-          <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
-          <li>Plotly Dash, Docker, GitHub</li>
-        </ul>
+        <!-- Skills content -->
       </section>
-
-      <!-- Languages Section -->
       <section id="languages" class="section-card">
         <h2>Languages</h2>
-        <ul>
-          <li>Croatian (native)</li>
-          <li>English (C2)</li>
-        </ul>
+        <!-- Languages content -->
+      </section>
+      <section id="prototype" class="section-card">
+        <h2>Prototype Video</h2>
+        <div class="prototype-demo">
+          <iframe
+            src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+            title="Prototype Demo"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
       </section>
     </main>
   </div>
