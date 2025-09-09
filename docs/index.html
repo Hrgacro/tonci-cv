@@ -1,4 +1,3 @@
-<!-- docs/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
 
-  <!-- Stylesheet (cache-bust by bumping v=) -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
@@ -29,7 +28,6 @@
     </div>
   </header>
 
-  <!-- Alternate-view Sidebar -->
   <nav id="sidebar" class="composite-only">
     <div class="sidebar-section sidebar-profile">
       <img src="avatar.jpg" alt="User Avatar" class="avatar-small" />
@@ -67,17 +65,78 @@
   </nav>
 
   <main>
-    <!-- existing main content (sections) here -->
-    <!-- … -->
+    <section id="experience" class="section-card">
+      <h2>Experience</h2>
+      <h3 id="freelance-uxui-designer">Freelance UX/UI Designer</h3>
+      <p><strong>09/2023 – 05/2024, Osijek</strong><br />
+      - Redesigned web flows and interfaces in Figma<br />
+      - Developed style guides and component libraries<br />
+      - Created a new Photo/Video portfolio section, enhancing usability<br />
+      - Managed client communications and project timelines from concept to delivery</p>
+      
+      <h3 id="mmwave-parking-solution-developer">mmWave Parking Solution Developer</h3>
+      <p><strong>02/2025 – 09/2025, Osijek</strong><br />
+      - Built a hands-on parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br />
+      - Created a Python script with AI assistance to capture and parse high-frequency radar data<br />
+      - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br />
+      - Designed and deployed a Plotly Dash dashboard for live visualization</p>
+      
+      <h3 id="vehicle-fleet-administrator-hrvatski-telekom">Vehicle Fleet Administrator, Hrvatski Telekom</h3>
+      <p><strong>04/2019 – 09/2019, Osijek</strong><br />
+      - Scheduled maintenance and tracked over 50 vehicles<br />
+      - Automated status reporting, delivering timely insights to management<br />
+      - Created Excel-based dashboards to monitor fleet performance</p>
+      
+      <h3 id="bartender-server">Bartender &amp; Server</h3>
+      <p><strong>2017 – 2021</strong><br />
+      - Learned about user experience and customer psychology<br />
+      - Developed strong communication and teamwork skills<br />
+      - Adapted to dynamic workflows and resolved customer issues promptly</p>
+    </section>
+
+    <section id="education" class="section-card">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>UX/UI Design</strong>, Algebra (09/2023 – 05/2024)</li>
+        <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014 – 12/2024)</li>
+      </ul>
+    </section>
+
+    <section id="courses" class="section-card">
+      <h2>Courses</h2>
+      <ul>
+        <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
+        <li><strong>Python Courses</strong>, Udemy (2024–2025)</li>
+        <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
+      </ul>
+    </section>
+
+    <div id="skills" class="section-card">
+      <h2 id="technical-skills">Technical Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
+        <li><strong>AI/ML:</strong> NVIDIA Nemotron API, prompt engineering</li>
+        <li><strong>Embedded &amp; Hardware Tools:</strong> STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
+        <li><strong>Data Visualization &amp; DevOps:</strong> Plotly Dash, Docker, GitHub</li>
+      </ul>
+    </div>
+
+    <section id="languages" class="section-card">
+      <h2>Languages</h2>
+      <ul>
+        <li>Croatian (native)</li>
+        <li>English (C2)</li>
+      </ul>
+    </section>
   </main>
 
   <!-- Inline toggle script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('toggleView');
-      btn.addEventListener('click', () => {
+      const toggleBtn = document.getElementById('toggleView');
+      toggleBtn.addEventListener('click', () => {
         document.body.classList.toggle('composite');
-        btn.textContent = document.body.classList.contains('composite')
+        toggleBtn.textContent = document.body.classList.contains('composite')
           ? 'Standard View'
           : 'Alternate View';
       });
