@@ -4,16 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tonči Hrgović — Resume & UX/UI Demo</title>
-
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
-  <!-- Hero header only for Standard View -->
+  <button id="toggleView" class="btn toggle-global">Alternate View</button>
+
+  <!-- Header (Standard View only) -->
   <header class="hero view-standard">
     <div class="hero-content">
       <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-large" />
@@ -21,9 +19,6 @@
         <h1>Tonči Hrgović</h1>
         <p class="role">AI Developer & UX/UI Designer</p>
       </div>
-    </div>
-    <div class="cta-group">
-      <button id="toggleView" class="btn">Alternate View</button>
     </div>
   </header>
 
@@ -62,7 +57,6 @@
         - Developed communication and teamwork skills<br>
         - Adapted to dynamic workflows and resolved issues promptly</p>
       </section>
-
       <section id="education" class="card">
         <h2>Education</h2>
         <ul>
@@ -70,7 +64,6 @@
           <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
         </ul>
       </section>
-
       <section id="courses" class="card">
         <h2>Courses</h2>
         <ul>
@@ -79,7 +72,6 @@
           <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
         </ul>
       </section>
-
       <section id="skills" class="card">
         <h2>Skills</h2>
         <ul>
@@ -89,7 +81,6 @@
           <li>Plotly Dash, Docker, GitHub</li>
         </ul>
       </section>
-
       <section id="languages" class="card">
         <h2>Languages</h2>
         <ul>
@@ -103,20 +94,15 @@
   <!-- Alternate UX/UI Showcase View -->
   <div class="view-alt">
     <aside class="alt-sidebar">
-      <div class="sidebar-profile">
-        <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
-        <h2>Tonči Hrgović</h2>
-        <p class="role">AI Developer & UX/UI Designer</p>
-      </div>
+      <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
+      <h2>Tonči Hrgović</h2>
+      <p class="role">AI Developer & UX/UI Designer</p>
       <div class="prototype-demo">
         <h3>Prototype Demo</h3>
-        <iframe
-          src="https://www.youtube.com/embed/zbJpwU5Eh9E"
-          title="Prototype Demo"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+                title="Prototype Demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
       </div>
       <nav class="sidebar-links">
         <h3>Navigate</h3>
@@ -160,7 +146,6 @@
         - Developed communication and teamwork skills<br>
         - Adapted to dynamic workflows and resolved issues promptly</p>
       </section>
-
       <section id="education" class="section-card">
         <h2>Education</h2>
         <ul>
@@ -168,8 +153,6 @@
           <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
         </ul>
       </section>
-
-      <!-- Courses Section -->
       <section id="courses" class="section-card">
         <h2>Courses</h2>
         <ul>
@@ -178,8 +161,6 @@
           <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
         </ul>
       </section>
-
-      <!-- Skills Section -->
       <section id="skills" class="section-card">
         <h2>Skills</h2>
         <ul>
@@ -189,8 +170,6 @@
           <li>Plotly Dash, Docker, GitHub</li>
         </ul>
       </section>
-
-      <!-- Languages Section -->
       <section id="languages" class="section-card">
         <h2>Languages</h2>
         <ul>
@@ -203,13 +182,13 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  const btn = document.getElementById('toggleView');
-  btn.addEventListener('click', () => {
-    document.body.classList.toggle('alt');
-    btn.textContent = document.body.classList.contains('alt')
-      ? 'Standard View'
-      : 'Alternate View';
-    });
+      const btn = document.getElementById('toggleView');
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('alt');
+        btn.textContent = document.body.classList.contains('alt')
+          ? 'Standard View'
+          : 'Alternate View';
+      });
     });
   </script>
 </body>

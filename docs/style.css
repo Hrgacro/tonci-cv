@@ -6,6 +6,14 @@ body {
   color: #1e293b;
 }
 
+/* Global toggle button */
+.toggle-global {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
 /* Hero header (Standard View only) */
 header.hero {
   display: flex;
@@ -26,20 +34,10 @@ header.hero {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #0ea5e9;
-  display: block;
 }
 .role {
   margin: 0.25rem 0 0;
   color: #475569;
-}
-.cta-group .btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  background: #0ea5e9;
-  color: #fff;
 }
 
 /* Hide both views by default */
@@ -92,29 +90,28 @@ header.hero {
   background: #f4f6fa;
   min-height: 100vh;
 }
-/* Hide header in alternate view */
-body.alt header.hero,
-.view-alt .view-standard {
+/* Hide header in Alternate View */
+body.alt header.hero {
   display: none;
 }
 .alt-sidebar {
   position: sticky;
   top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.alt-sidebar .avatar-small {
+.avatar-small {
   width: 80px;
   height: 80px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #0ea5e9;
-  display: block;
+  margin: 0 auto;
 }
 .sidebar-profile h2 {
   margin: 0.5rem 0 0;
@@ -190,12 +187,6 @@ body:not(.alt) .view-alt      { display: none; }
 body.alt     .view-standard { display: none; }
 body.alt     .view-alt      { display: grid; }
 
-.toggle-global {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  z-index: 99;
-}
 /* Responsive adjustments */
 @media (max-width: 900px) {
   .view-alt {
