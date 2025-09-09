@@ -6,12 +6,13 @@
   <title>Tonči Hrgović — Resume & UX/UI Demo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 <body>
+  <!-- Global Toggle Button -->
   <button id="toggleView" class="btn toggle-global">Alternate View</button>
 
-  <!-- Header (Standard View only) -->
+  <!-- Hero header (Standard View only) -->
   <header class="hero view-standard">
     <div class="hero-content">
       <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-large" />
@@ -19,6 +20,17 @@
         <h1>Tonči Hrgović</h1>
         <p class="role">AI Developer & UX/UI Designer</p>
       </div>
+    </div>
+    <!-- Prototype Demo video in header -->
+    <div class="hero-video">
+      <h3>Prototype Demo</h3>
+      <iframe
+        src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+        title="Prototype Demo"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
   </header>
 
@@ -32,6 +44,7 @@
       <a href="#languages">Languages</a>
     </nav>
     <main>
+      <!-- Experience Section -->
       <section id="experience" class="card">
         <h2>Experience</h2>
         <h3>Freelance UX/UI Designer</h3>
@@ -57,6 +70,8 @@
         - Developed communication and teamwork skills<br>
         - Adapted to dynamic workflows and resolved issues promptly</p>
       </section>
+
+      <!-- Education Section -->
       <section id="education" class="card">
         <h2>Education</h2>
         <ul>
@@ -64,6 +79,8 @@
           <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
         </ul>
       </section>
+
+      <!-- Courses Section -->
       <section id="courses" class="card">
         <h2>Courses</h2>
         <ul>
@@ -72,6 +89,8 @@
           <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
         </ul>
       </section>
+
+      <!-- Skills Section -->
       <section id="skills" class="card">
         <h2>Skills</h2>
         <ul>
@@ -81,6 +100,8 @@
           <li>Plotly Dash, Docker, GitHub</li>
         </ul>
       </section>
+
+      <!-- Languages Section -->
       <section id="languages" class="card">
         <h2>Languages</h2>
         <ul>
@@ -94,15 +115,20 @@
   <!-- Alternate UX/UI Showcase View -->
   <div class="view-alt">
     <aside class="alt-sidebar">
-      <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
-      <h2>Tonči Hrgović</h2>
-      <p class="role">AI Developer & UX/UI Designer</p>
+      <div class="sidebar-profile">
+        <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
+        <h2>Tonči Hrgović</h2>
+        <p class="role">AI Developer & UX/UI Designer</p>
+      </div>
       <div class="prototype-demo">
         <h3>Prototype Demo</h3>
-        <iframe src="https://www.youtube.com/embed/zbJpwU5Eh9E"
-                title="Prototype Demo" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/zbJpwU5Eh9E"
+          title="Prototype Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
       <nav class="sidebar-links">
         <h3>Navigate</h3>
@@ -121,6 +147,7 @@
       </div>
     </aside>
     <main class="alt-main">
+      <!-- Experience Section -->
       <section id="experience" class="section-card">
         <h2>Experience</h2>
         <h3>Freelance UX/UI Designer</h3>
@@ -146,6 +173,8 @@
         - Developed communication and teamwork skills<br>
         - Adapted to dynamic workflows and resolved issues promptly</p>
       </section>
+
+      <!-- Education Section -->
       <section id="education" class="section-card">
         <h2>Education</h2>
         <ul>
@@ -153,6 +182,8 @@
           <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
         </ul>
       </section>
+
+      <!-- Courses Section -->
       <section id="courses" class="section-card">
         <h2>Courses</h2>
         <ul>
@@ -161,6 +192,8 @@
           <li><strong>UX/UI Courses</strong>, Udemy (2023–2025)</li>
         </ul>
       </section>
+
+      <!-- Skills Section -->
       <section id="skills" class="section-card">
         <h2>Skills</h2>
         <ul>
@@ -170,6 +203,8 @@
           <li>Plotly Dash, Docker, GitHub</li>
         </ul>
       </section>
+
+      <!-- Languages Section -->
       <section id="languages" class="section-card">
         <h2>Languages</h2>
         <ul>

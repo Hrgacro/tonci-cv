@@ -17,7 +17,7 @@ body {
 /* Hero header (Standard View only) */
 header.hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 2rem;
   background: #fff;
@@ -38,6 +38,18 @@ header.hero {
 .role {
   margin: 0.25rem 0 0;
   color: #475569;
+}
+/* Prototype Demo video in hero */
+.hero-video {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.hero-video iframe {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 0.5rem;
 }
 
 /* Hide both views by default */
@@ -95,15 +107,14 @@ body.alt header.hero {
   display: none;
 }
 .alt-sidebar {
-  position: sticky;
-  top: 2rem;
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 .avatar-small {
   width: 80px;
@@ -111,17 +122,11 @@ body.alt header.hero {
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #0ea5e9;
-  margin: 0 auto;
 }
-.sidebar-profile h2 {
-  margin: 0.5rem 0 0;
-  text-align: center;
-  color: #1e293b;
-}
+.sidebar-profile h2,
 .sidebar-profile .role {
-  font-size: 0.9rem;
   text-align: center;
-  color: #475569;
+  margin: 0.25rem 0;
 }
 .prototype-demo iframe {
   width: 100%;
@@ -131,7 +136,7 @@ body.alt header.hero {
 }
 .sidebar-links h3,
 .sidebar-contacts h3 {
-  margin-bottom: 0.75rem;
+  margin: 0.75rem 0;
   color: #0c4a6e;
   font-size: 1.1rem;
 }
@@ -142,10 +147,10 @@ body.alt header.hero {
 .sidebar-links li {
   display: flex;
   align-items: center;
-  margin: 0.6rem 0;
+  margin: 0.5rem 0;
 }
 .sidebar-links i {
-  margin-right: 0.75rem;
+  margin-right: 0.5rem;
   color: #0ea5e9;
 }
 .sidebar-links a {
@@ -155,7 +160,7 @@ body.alt header.hero {
 .sidebar-contacts p {
   display: flex;
   align-items: center;
-  margin: 0.4rem 0;
+  margin: 0.5rem 0;
   font-size: 0.9rem;
 }
 .sidebar-contacts i {
@@ -165,7 +170,7 @@ body.alt header.hero {
 .alt-main {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 .section-card {
   background: #fff;
@@ -195,7 +200,6 @@ body.alt     .view-alt      { display: grid; }
   }
   .alt-sidebar {
     width: 100%;
-    position: relative;
-    top: auto;
+    align-items: center;
   }
 }
