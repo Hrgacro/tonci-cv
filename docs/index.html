@@ -203,13 +203,13 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('toggleView');
-      btn.addEventListener('click', () => {
-        document.body.classList.toggle('alt');
-        btn.textContent = document.body.classList.contains('alt')
-          ? 'Standard View'
-          : 'Alternate View';
-      });
+  const btn = document.getElementById('toggleView');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('alt');
+    btn.textContent = document.body.classList.contains('alt')
+      ? 'Standard View'
+      : 'Alternate View';
+    });
     });
   </script>
 </body>
