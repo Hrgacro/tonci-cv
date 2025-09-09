@@ -6,7 +6,7 @@ body {
   color: #1e293b;
 }
 
-/* Hero header */
+/* Hero header (Standard View only) */
 header.hero {
   display: flex;
   justify-content: space-between;
@@ -40,13 +40,13 @@ header.hero {
   color: #fff;
 }
 
-/* Hide both view wrappers initially */
+/* Hide both views by default */
 .view-standard,
 .view-alt {
   display: none;
 }
 
-/* Standard View */
+/* Standard View styles */
 .view-standard {
   display: block;
 }
@@ -63,7 +63,7 @@ header.hero {
   text-decoration: none;
   font-weight: 600;
 }
-main {
+.view-standard main {
   padding: 2rem;
   background: #f4f6fa;
 }
@@ -74,20 +74,26 @@ main {
   box-shadow: 0 2px 12px rgba(30,40,70,0.07);
   margin-bottom: 2rem;
 }
-h2 {
+.card h2 {
   color: #0ea5e9;
   border-bottom: 1px solid #e2e8f0;
   padding-bottom: 0.5rem;
   margin-top: 0;
 }
 
-/* Alternate View */
+/* Alternate View styles */
 .view-alt {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 2rem;
   padding: 2rem;
   background: #f4f6fa;
+  min-height: 100vh;
+}
+/* Hide header in alternate view */
+body.alt header.hero,
+.view-alt .view-standard {
+  display: none;
 }
 .alt-sidebar {
   position: sticky;
@@ -181,7 +187,7 @@ body:not(.alt) .view-alt      { display: none; }
 body.alt     .view-standard { display: none; }
 body.alt     .view-alt      { display: grid; }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .view-alt {
     grid-template-columns: 1fr;
