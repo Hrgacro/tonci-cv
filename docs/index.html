@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="./">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tonči Hrgović</title>
+  <title>Tonči Hrgović — UX/UI Layout</title>
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
-<body>
-  <header class="hero">
-    <button id="toggleView" class="toggle-view">Alternate View</button>
-    <img src="avatar.jpg" alt="User Avatar" class="avatar" />
-    <h1>Tonči Hrgović</h1>
-    <p class="subtitle">AI Developer & UX/UI Designer</p>
-    <div class="cta-group">
-      <a href="#experience" class="cta-button">See Experience</a>
-      <a href="#education" class="cta-button">See Education</a>
-      <a href="#courses" class="cta-button">See Courses</a>
-      <a href="#skills" class="cta-button">See Skills</a>
-      <a href="#languages" class="cta-button">See Languages</a>
-    </div>
-  </header>
-
-  <nav id="sidebar" class="composite-only">
-    <div class="sidebar-section sidebar-profile">
-      <img src="avatar.jpg" alt="User Avatar" class="avatar-small" />
+<body class="alt-view">
+  <aside class="alt-sidebar">
+    <div class="sidebar-profile">
+      <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
       <h2>Tonči Hrgović</h2>
       <p class="role">AI Developer & UX/UI Designer</p>
     </div>
 
-    <div class="sidebar-section prototype-demo">
+    <div class="prototype-demo">
       <h3>Prototype Demo</h3>
       <iframe
         src="https://www.youtube.com/embed/zbJpwU5Eh9E?si=_bq69pZl7EA5tKyl"
-        title="mmWave Parking Detection Prototype"
+        title="Prototype Demo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
     </div>
 
-    <div class="sidebar-section sidebar-links">
-      <h3>Navigate</h3>
+    <nav class="sidebar-links">
+      <h3>Navigation</h3>
       <ul>
         <li><i class="fas fa-briefcase"></i><a href="#experience">Experience</a></li>
         <li><i class="fas fa-graduation-cap"></i><a href="#education">Education</a></li>
@@ -55,50 +40,52 @@
         <li><i class="fas fa-tools"></i><a href="#skills">Skills</a></li>
         <li><i class="fas fa-language"></i><a href="#languages">Languages</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <div class="sidebar-section sidebar-contacts">
+    <div class="sidebar-contacts">
       <h3>Contact</h3>
       <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com">your.email@example.com</a></p>
       <p><i class="fas fa-link"></i><a href="https://github.com/yourusername">github.com/yourusername</a></p>
     </div>
-  </nav>
 
-  <main>
+    <a href="index.html" class="toggle-view">Back to Standard View</a>
+  </aside>
+
+  <main class="alt-main">
     <section id="experience" class="section-card">
       <h2>Experience</h2>
-      <h3 id="freelance-uxui-designer">Freelance UX/UI Designer</h3>
-      <p><strong>09/2023 – 05/2024, Osijek</strong><br />
-      - Redesigned web flows and interfaces in Figma<br />
-      - Developed style guides and component libraries<br />
-      - Created a new Photo/Video portfolio section, enhancing usability<br />
+      <h3>Freelance UX/UI Designer</h3>
+      <p><strong>09/2023–05/2024, Osijek</strong><br>
+      - Redesigned web flows and interfaces in Figma<br>
+      - Developed style guides and component libraries<br>
+      - Created a new Photo/Video portfolio section, enhancing usability<br>
       - Managed client communications and project timelines from concept to delivery</p>
-      
-      <h3 id="mmwave-parking-solution-developer">mmWave Parking Solution Developer</h3>
-      <p><strong>02/2025 – 09/2025, Osijek</strong><br />
-      - Built a hands-on parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br />
-      - Created a Python script with AI assistance to capture and parse high-frequency radar data<br />
-      - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br />
-      - Designed and deployed a Plotly Dash dashboard for live visualization</p>
-      
-      <h3 id="vehicle-fleet-administrator-hrvatski-telekom">Vehicle Fleet Administrator, Hrvatski Telekom</h3>
-      <p><strong>04/2019 – 09/2019, Osijek</strong><br />
-      - Scheduled maintenance and tracked over 50 vehicles<br />
-      - Automated status reporting, delivering timely insights to management<br />
+
+      <h3>mmWave Parking Solution Developer</h3>
+      <p><strong>02/2025–09/2025, Osijek</strong><br>
+      - Built a parking detection prototype using TI’s AWR1843AOPEVM radar sensor and an STM32 Nucleo board<br>
+      - Created a Python script with AI assistance to parse high-frequency radar data<br>
+      - Integrated ADC measurements from ground sensors for enhanced detection accuracy<br>
+      - Deployed a Plotly Dash dashboard for live visualization</p>
+
+      <h3>Vehicle Fleet Administrator, Hrvatski Telekom</h3>
+      <p><strong>04/2019–09/2019, Osijek</strong><br>
+      - Scheduled maintenance and tracked 50+ vehicles<br>
+      - Automated status reporting for management insights<br>
       - Created Excel-based dashboards to monitor fleet performance</p>
-      
-      <h3 id="bartender-server">Bartender &amp; Server</h3>
-      <p><strong>2017 – 2021</strong><br />
-      - Learned about user experience and customer psychology<br />
-      - Developed strong communication and teamwork skills<br />
-      - Adapted to dynamic workflows and resolved customer issues promptly</p>
+
+      <h3>Bartender &amp; Server</h3>
+      <p><strong>2017–2021</strong><br>
+      - Learned user experience and customer psychology<br>
+      - Developed communication and teamwork skills<br>
+      - Adapted to dynamic workflows and resolved issues promptly</p>
     </section>
 
     <section id="education" class="section-card">
       <h2>Education</h2>
       <ul>
-        <li><strong>UX/UI Design</strong>, Algebra (09/2023 – 05/2024)</li>
-        <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014 – 12/2024)</li>
+        <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
+        <li><strong>Microsoft IT Support Specialist</strong>, Microsoft (09/2014–12/2024)</li>
       </ul>
     </section>
 
@@ -111,15 +98,15 @@
       </ul>
     </section>
 
-    <div id="skills" class="section-card">
-      <h2 id="technical-skills">Technical Skills</h2>
+    <section id="skills" class="section-card">
+      <h2>Skills</h2>
       <ul>
-        <li><strong>Programming Languages:</strong> Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
-        <li><strong>AI/ML:</strong> NVIDIA Nemotron API, prompt engineering</li>
-        <li><strong>Embedded &amp; Hardware Tools:</strong> STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
-        <li><strong>Data Visualization &amp; DevOps:</strong> Plotly Dash, Docker, GitHub</li>
+        <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
+        <li>NVIDIA Nemotron API, prompt engineering</li>
+        <li>STM32CubeIDE &amp; MX, Figma, TI AWR1843 SDK</li>
+        <li>Plotly Dash, Docker, GitHub</li>
       </ul>
-    </div>
+    </section>
 
     <section id="languages" class="section-card">
       <h2>Languages</h2>
@@ -129,18 +116,5 @@
       </ul>
     </section>
   </main>
-
-  <!-- Inline toggle script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('toggleView');
-      toggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('composite');
-        toggleBtn.textContent = document.body.classList.contains('composite')
-          ? 'Standard View'
-          : 'Alternate View';
-      });
-    });
-  </script>
 </body>
 </html>
