@@ -3,57 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tonči Hrgović — UX/UI Layout</title>
+  <title>Tonči Hrgović</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/1f5881e2be.js" crossorigin="anonymous"></script>
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=5" />
+  <!-- Stylesheet (cache-bust v6) -->
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
-<body class="alt-view">
-  <aside class="alt-sidebar">
-    <div class="sidebar-profile">
-      <img src="avatar.jpg" class="avatar-small" alt="Tonči Hrgović" />
-      <h2>Tonči Hrgović</h2>
-      <p class="role">AI Developer & UX/UI Designer</p>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="avatar.jpg" alt="Tonči Hrgović" class="avatar-large" />
+      <div>
+        <h1>Tonči Hrgović</h1>
+        <p class="role">AI Developer & UX/UI Designer</p>
+      </div>
     </div>
-
-    <div class="prototype-demo">
-      <h3>Prototype Demo</h3>
-      <iframe
-        src="https://www.youtube.com/embed/zbJpwU5Eh9E?si=_bq69pZl7EA5tKyl"
-        title="Prototype Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
+    <div class="cta-group">
+      <button id="toggleView" class="btn">Alternate View</button>
+      <!-- Optional: link to standalone page -->
+      <a href="alternate.html" class="btn btn-secondary">Standalone UX/UI</a>
     </div>
+  </header>
 
-    <nav class="sidebar-links">
-      <h3>Navigation</h3>
-      <ul>
-        <li><i class="fas fa-briefcase"></i><a href="#experience">Experience</a></li>
-        <li><i class="fas fa-graduation-cap"></i><a href="#education">Education</a></li>
-        <li><i class="fas fa-book"></i><a href="#courses">Courses</a></li>
-        <li><i class="fas fa-tools"></i><a href="#skills">Skills</a></li>
-        <li><i class="fas fa-language"></i><a href="#languages">Languages</a></li>
-      </ul>
-    </nav>
-
-    <div class="sidebar-contacts">
-      <h3>Contact</h3>
-      <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com">your.email@example.com</a></p>
-      <p><i class="fas fa-link"></i><a href="https://github.com/yourusername">github.com/yourusername</a></p>
+  <nav id="sidebar">
+    <ul>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#courses"><i class="fas fa-book"></i> Courses</a></li>
+      <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+      <li><a href="#languages"><i class="fas fa-language"></i> Languages</a></li>
+    </ul>
+    <div class="contact">
+      <p><i class="fas fa-envelope"></i><a href="mailto:your.email@example.com"> your.email@example.com</a></p>
+      <p><i class="fas fa-link"></i><a href="https://github.com/yourusername"> github.com/yourusername</a></p>
     </div>
+  </nav>
 
-    <a href="index.html" class="toggle-view">Back to Standard View</a>
-  </aside>
-
-  <main class="alt-main">
-    <section id="experience" class="section-card">
+  <main>
+    <section id="experience" class="card">
       <h2>Experience</h2>
+
       <h3>Freelance UX/UI Designer</h3>
       <p><strong>09/2023–05/2024, Osijek</strong><br>
       - Redesigned web flows and interfaces in Figma<br>
@@ -81,7 +73,7 @@
       - Adapted to dynamic workflows and resolved issues promptly</p>
     </section>
 
-    <section id="education" class="section-card">
+    <section id="education" class="card">
       <h2>Education</h2>
       <ul>
         <li><strong>UX/UI Design</strong>, Algebra (09/2023–05/2024)</li>
@@ -89,7 +81,7 @@
       </ul>
     </section>
 
-    <section id="courses" class="section-card">
+    <section id="courses" class="card">
       <h2>Courses</h2>
       <ul>
         <li><strong>AI Engineering &amp; Development</strong>, Udemy (2024–2025)</li>
@@ -98,7 +90,7 @@
       </ul>
     </section>
 
-    <section id="skills" class="section-card">
+    <section id="skills" class="card">
       <h2>Skills</h2>
       <ul>
         <li>Python (pandas, NumPy), JavaScript (React), C (STM32)</li>
@@ -108,7 +100,7 @@
       </ul>
     </section>
 
-    <section id="languages" class="section-card">
+    <section id="languages" class="card">
       <h2>Languages</h2>
       <ul>
         <li>Croatian (native)</li>
@@ -116,5 +108,17 @@
       </ul>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('toggleView');
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('composite');
+        btn.textContent = document.body.classList.contains('composite')
+          ? 'Standard View'
+          : 'Alternate View';
+      });
+    });
+  </script>
 </body>
 </html>
