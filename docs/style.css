@@ -7,7 +7,7 @@ body {
   background: #fff;
 }
 
-/* Global toggle button - unchanged */
+/* Global toggle button */
 .toggle-global {
   position: fixed;
   top: 1rem;
@@ -20,6 +20,7 @@ body {
   cursor: pointer;
   background: #0ea5e9;
   color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Standard View: vintage style */
@@ -40,7 +41,6 @@ header.hero {
   color: #223058;
   margin: 0 0 0.2rem 0;
   font-family: 'Georgia', serif;
-  letter-spacing: 0;
 }
 .role {
   margin: 0.25rem 0 0.5rem 0;
@@ -118,7 +118,6 @@ header.hero {
   margin: 0 0 0.6rem 0;
   border: none;
   padding-bottom: 0;
-  letter-spacing: 0.5px;
 }
 .card h3 {
   font-family: 'Georgia', serif;
@@ -144,7 +143,26 @@ header.hero {
   margin-top: 1rem;
 }
 
-/* Alternate View styles - untouched, keep as before */
+/* Override toggle button styling in Standard View only */
+body:not(.alt) .toggle-global {
+  background: transparent;
+  color: #223058;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+/* Alternate View font restore and button style */
+body.alt {
+  font-family: 'Inter', sans-serif;
+}
+body.alt .toggle-global {
+  background: #0ea5e9;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+}
+
+/* Alternate View styles - untouched */
 .view-alt {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -153,7 +171,6 @@ header.hero {
   background: #f4f6fa;
   min-height: 100vh;
 }
-/* Hide header in Alternate View */
 body.alt header.hero {
   display: none;
 }
@@ -246,37 +263,6 @@ body.alt header.hero {
   margin-bottom: 1rem;
   border-bottom: 1px solid #e2e8f0;
   padding-bottom: 0.5rem;
-}
-
-/* Toggle behavior for Unified Button Styling */
-body:not(.alt) .toggle-global {
-  background: transparent;
-  color: #223058;
-  font-family: 'Georgia', serif;
-  font-weight: normal;
-  border: none;
-  padding: 0;
-  position: static;
-  top: auto;
-  right: auto;
-  cursor: pointer;
-  box-shadow: none;
-}
-body.alt {
-  font-family: 'Inter', sans-serif;
-}
-body.alt .toggle-global {
-  background: #0ea5e9;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  font-weight: bold;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  box-shadow: none;
 }
 
 /* Toggle logic */
