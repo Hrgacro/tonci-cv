@@ -248,6 +248,37 @@ body.alt header.hero {
   padding-bottom: 0.5rem;
 }
 
+/* Toggle behavior for Unified Button Styling */
+body:not(.alt) .toggle-global {
+  background: transparent;
+  color: #223058;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  border: none;
+  padding: 0;
+  position: static;
+  top: auto;
+  right: auto;
+  cursor: pointer;
+  box-shadow: none;
+}
+body.alt {
+  font-family: 'Inter', sans-serif;
+}
+body.alt .toggle-global {
+  background: #0ea5e9;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: none;
+}
+
 /* Toggle logic */
 body:not(.alt) .view-standard { display: block; }
 body:not(.alt) .view-alt      { display: none; }
