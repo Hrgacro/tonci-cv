@@ -12,6 +12,13 @@ body {
   top: 1rem;
   right: 1rem;
   z-index: 100;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #0ea5e9;
+  color: #fff;
 }
 
 /* Hero header (Standard View only) */
@@ -114,6 +121,7 @@ body.alt header.hero {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  height: fit-content;
 }
 .sidebar-profile {
   display: flex;
@@ -162,6 +170,9 @@ body.alt header.hero {
   color: #1e293b;
   text-decoration: none;
 }
+.sidebar-links a:hover {
+  color: #0ea5e9;
+}
 .sidebar-contacts p {
   display: flex;
   align-items: center;
@@ -176,6 +187,7 @@ body.alt header.hero {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-y: auto;
 }
 .section-card {
   background: #fff;
