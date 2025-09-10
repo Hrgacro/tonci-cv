@@ -18,16 +18,16 @@ body {
   border-radius: 0.5rem;
   font-weight: bold;
   cursor: pointer;
-  background: #1e293b; /* Dark navy blue for better visibility matching vintage style */
-  color: #f9fafb; /* Light color for good contrast */
-  font-family: 'Georgia', serif; /* Matching font for Standard View */
+  background: #1e293b; /* Dark navy for vintage style */
+  color: #f9fafb;
+  font-family: 'Georgia', serif;
   font-size: 1rem;
-  box-shadow: 0 2px 6px rgba(30, 40, 70, 0.3); /* subtle shadow to raise the button visually */
+  box-shadow: 0 2px 6px rgba(30, 40, 70, 0.3);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .toggle-global:hover,
 .toggle-global:focus {
-  background-color: #0ea5e9; /* on hover, shift to brand blue for interaction feedback */
+  background-color: #0ea5e9;
   color: #fff;
   outline: none;
 }
@@ -58,7 +58,7 @@ header.hero {
   font-size: 1.1rem;
 }
 .avatar-large {
-  display: none; /* Hide the avatar in Standard View */
+  display: none; /* Hide avatar */
 }
 .hero-video {
   margin-top: 1.5rem;
@@ -125,8 +125,6 @@ header.hero {
   font-weight: bold;
   color: #223058;
   margin: 0 0 0.6rem 0;
-  border: none;
-  padding-bottom: 0;
 }
 .card h3 {
   font-family: 'Georgia', serif;
@@ -135,7 +133,8 @@ header.hero {
   color: #222;
   margin: 1.1rem 0 0.3rem 0;
 }
-.card p, .card ul {
+.card p,
+.card ul {
   margin: 0 0 0.2rem 1rem;
   font-size: 1rem;
 }
@@ -154,11 +153,10 @@ header.hero {
 
 /* Override toggle button styling in Standard View only */
 body:not(.alt) .toggle-global {
-  background: #1e293b; /* Ensure toggle visible */
+  background: #1e293b;
   color: #f9fafb;
   font-family: 'Georgia', serif;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(30, 40, 70, 0.3);
 }
 
 /* Alternate View font restore and button style */
@@ -170,16 +168,9 @@ body.alt .toggle-global {
   color: #fff;
   font-family: 'Inter', sans-serif;
   font-weight: bold;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  box-shadow: none;
 }
 
-/* Alternate View styles - untouched */
+/* Alternate View styles */
 .view-alt {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -187,6 +178,7 @@ body.alt .toggle-global {
   padding: 2rem;
   background: #f4f6fa;
   min-height: 100vh;
+  align-items: start; /* Align sidebar and main top edges */
 }
 body.alt header.hero {
   display: none;
@@ -198,9 +190,9 @@ body.alt header.hero {
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch; /* Make child items span full width */
   gap: 1.5rem;
-  height: fit-content;
+  max-width: 280px; /* Fix sidebar width */
 }
 .sidebar-profile {
   display: flex;
@@ -226,41 +218,40 @@ body.alt header.hero {
   border: none;
   border-radius: 0.5rem;
 }
+.sidebar-links,
+.sidebar-contacts {
+  width: 100%; /* Ensures nav and contacts align */
+}
 .sidebar-links h3,
 .sidebar-contacts h3 {
   margin: 0.75rem 0;
   color: #0c4a6e;
   font-size: 1.1rem;
 }
-.sidebar-links ul {
-  list-style: none;
+.sidebar-links ul,
+.sidebar-contacts {
+  margin: 0;
   padding: 0;
 }
-.sidebar-links li {
-  display: flex;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-.sidebar-links i {
-  margin-right: 0.5rem;
-  color: #0ea5e9;
-}
-.sidebar-links a {
-  color: #1e293b;
-  text-decoration: none;
-}
-.sidebar-links a:hover {
-  color: #0ea5e9;
-}
+.sidebar-links li,
 .sidebar-contacts p {
   display: flex;
   align-items: center;
   margin: 0.5rem 0;
-  font-size: 0.9rem;
 }
+.sidebar-links i,
 .sidebar-contacts i {
   margin-right: 0.5rem;
-  color: #475569;
+  color: #0ea5e9;
+}
+.sidebar-links a,
+.sidebar-contacts a {
+  color: #1e293b;
+  text-decoration: none;
+  flex: 1; /* Ensure links align width */
+}
+.sidebar-links a:hover {
+  color: #0ea5e9;
 }
 .alt-main {
   display: flex;
